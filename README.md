@@ -26,7 +26,7 @@ To Do:
 - On click of next button:
 - [x] alert user if input field is empty (if)
 - [x] (else) use value of input to dispatch to feelings reducer
-- [ ] setup function for user to be wired to understanding component on click of Next button
+- [x] setup function for user to be wired to understanding component on click of Next button
 
 ### understanding component
 - [ ] setup return of html (input - num, next button)
