@@ -5,12 +5,14 @@ import './App.css';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 // TO DO: import functions from components for routes
+import InputFeelings from '../Feelings/Feelings.jsx';
+
 
 function App() {
 
   return (
     <div className='App'>
-      {/* <Router> */}
+      <Router>
         <header className='App-header'>
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
@@ -19,10 +21,11 @@ function App() {
       
       {/* create pseudo routes for now - 
       feelings is initial route */}
-        {/* <Route exact path="/">
-          <Feelings />
+        <Route exact path="/">
+          <InputFeelings />
         </Route>
-        <Route exact path="/understanding">
+
+        {/* <Route exact path="/understanding">
           <Understanding />
         </Route>
         <Route exact path="/support">
@@ -36,8 +39,8 @@ function App() {
         </Route>
         <Route exact path="/confirmation">
           <Confirmation />
-        </Route>
-      </Router> */}
+        </Route> */}
+      </Router>
 
     </div>
   );

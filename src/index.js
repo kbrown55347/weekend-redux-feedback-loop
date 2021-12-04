@@ -4,12 +4,16 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-import { createStore, combineReducers } from 'redux';
+import logger from 'redux-logger';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 
 
 // setup reducers
 const feelings = (state = '', action) => {
+    if (action === 'ADD_FEELINGS') {
+        return action.payload
+    }
     return state;
 };
 
