@@ -16,8 +16,8 @@ To Do:
 
 - [x] npm installs, create database
 - [x] setup index.js for reducers, store, and provider
-- [ ] create components for feelings, understanding, support, comments, review, confirmation
-- [ ] create routes for each component
+- [x] create components for feelings, understanding, support, comments, review, confirmation
+- [x] create routes for each component
 
 ### feelings component
 - [ ] setup return of html (input - num, next button)
