@@ -4,5 +4,47 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
+
+
+// setup reducers
+const feelings = (state = '', action) => {
+    return state;
+};
+
+const understanding = (state = '', action) => {
+    return state;
+};
+
+const support = (state = '', action) => {
+    return state;
+};
+
+const comments = (state = '', action) => {
+    return state;
+};
+
+
+// setup store - container that holds reducers:
+const storeInstance = createStore(
+    combineReducers({
+        feelings,
+        understanding,
+        support,
+        comments
+    }),
+    applyMiddleware(
+        logger
+    )
+);
+
+
+// wrap App in Provider so <App> has access to redux stores
+ReactDOM.render(
+    <Provider store={storeInstance}>
+        <App />
+    </Provider>, 
+    document.getElementById('root'));
+
 registerServiceWorker();
