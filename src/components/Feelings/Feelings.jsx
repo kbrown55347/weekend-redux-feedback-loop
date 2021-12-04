@@ -1,10 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
+import {useHistory} from 'react-router-dom';
 
 function InputFeelings() {
 
+    const history = useHistory();
     const dispatch = useDispatch();
-
     let [valueToAdd, setValueToAdd] = useState('');
 
     // create function to set input value to valueToAdd
@@ -26,7 +27,7 @@ function InputFeelings() {
             payload: valueToAdd
         })
         // send to next page
-        //history.pushState()
+        history.push('/understanding')
         }
     }
 
@@ -34,16 +35,13 @@ function InputFeelings() {
         <div>
             <h1>How are you feeling today?</h1>
             <p>Feeling?</p>
-            <form>
-                <input
+            <input
                     onChange={handleInputValue}
                     type='number'
                     placeholder='1-5'
                     value={valueToAdd}
                 />
             <button onClick={handleInputChange}>Next</button>
-
-            </form>
         </div>
     )
 
