@@ -7,7 +7,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 // TO DO: import functions from components for routes
 import InputFeelings from '../Feelings/Feelings.jsx';
 import InputUnderstanding from '../Understanding/Understanding.jsx';
-
+import InputSupport from '../Support/Support.jsx';
 
 function App() {
 
@@ -25,23 +25,25 @@ function App() {
         <Route exact path="/">
           <InputFeelings />
         </Route>
-
         <Route exact path="/understanding">
           <InputUnderstanding />
         </Route>
-      
-        {/* <Route exact path="/support">
-          <Support />
+        <Route exact path="/support">
+          <InputSupport />
         </Route>
-        <Route exact path="/comments">
+        
+        {/* <Route exact path="/comments">
           <Comments />
-        </Route>
-        <Route exact path="/review">
+        </Route> */}
+
+        {/* <Route exact path="/review">
           <Review />
-        </Route>
-        <Route exact path="/confirmation">
+        </Route> */}
+
+        {/* <Route exact path="/confirmation">
           <Confirmation />
         </Route> */}
+
       </Router>
 
     </div>

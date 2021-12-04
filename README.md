@@ -29,13 +29,13 @@ To Do:
 - [x] setup function for user to be wired to understanding component on click of Next button
 
 ### understanding component
-- [ ] setup return of html (input - num, next button)
-- [ ] create understanding reducer in index.js, import to component
+- [x] setup return of html (input - num, next button)
+- [x] create understanding reducer in index.js, import to component
 
 - On click of next button:
-- [ ] alert user if input field is empty (if)
-- [ ] (else) use value of input to dispatch to understanding reducer
-- [ ] setup function for user to be wired to support component on click of Next button
+- [x] alert user if input field is empty (if)
+- [x] (else) use value of input to dispatch to understanding reducer
+- [x] setup function for user to be wired to support component on click of Next button
 
 ### support component
 - [ ] setup return of html (input - num, next button)
