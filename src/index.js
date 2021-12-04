@@ -32,6 +32,9 @@ const support = (state = '', action) => {
 };
 
 const comments = (state = '', action) => {
+    if (action.type === 'ADD_COMMENT') {
+        return action.payload;
+    }
     return state;
 };
 

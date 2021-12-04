@@ -8,6 +8,7 @@ import { HashRouter as Router, Route, Link } from "react-router-dom";
 import InputFeelings from '../Feelings/Feelings.jsx';
 import InputUnderstanding from '../Understanding/Understanding.jsx';
 import InputSupport from '../Support/Support.jsx';
+import InputComment from '../Comments/Comments.jsx';
 
 function App() {
 
@@ -31,10 +32,9 @@ function App() {
         <Route exact path="/support">
           <InputSupport />
         </Route>
-        
-        {/* <Route exact path="/comments">
-          <Comments />
-        </Route> */}
+        <Route exact path="/comments">
+          <InputComment />
+        </Route>
 
         {/* <Route exact path="/review">
           <Review />
