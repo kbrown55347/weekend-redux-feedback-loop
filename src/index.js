@@ -11,13 +11,16 @@ import { Provider } from 'react-redux';
 
 // setup reducers
 const feelings = (state = '', action) => {
-    if (action === 'ADD_FEELINGS') {
-        return action.payload
+    if (action.type === 'ADD_FEELINGS') {
+        return action.payload;
     }
     return state;
 };
 
 const understanding = (state = '', action) => {
+    if (action.type === 'ADD_UNDERSTANDING') {
+        return action.payload;
+    }
     return state;
 };
 

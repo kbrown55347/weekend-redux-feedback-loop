@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
 import {useHistory} from 'react-router-dom';
 
@@ -16,7 +16,7 @@ function InputFeelings() {
 
     // create function to dispatch input to feelings reducers
     const handleInputChange = () => {
-        console.log(valueToAdd);
+        // console.log(valueToAdd);
         // if there is no input
         if (valueToAdd === '') {
             // alert user to add input value
