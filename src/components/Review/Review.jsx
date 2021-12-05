@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-
+import axios from 'axios';
 
 function DisplayReview() {
 
@@ -18,6 +18,11 @@ const feedback = {
 }
 // console.log({feedback});
 
+// create function to submit feedback via axios post
+const submitFeedback = () => {
+    console.log('in Post route', feedback)
+}
+
 
     return (
         <div>
@@ -26,7 +31,7 @@ const feedback = {
             <p>Understanding: {understanding}</p>
             <p>Support: {support}</p>
             <p>Comments: {comments}</p>
-            <button>SUBMIT</button>
+            <button onClick={submitFeedback}>SUBMIT</button>
         </div>
     )
 } // end Display Review
