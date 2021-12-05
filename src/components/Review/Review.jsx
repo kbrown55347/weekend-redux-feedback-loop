@@ -1,7 +1,10 @@
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import {useHistory} from 'react-router-dom';
 
 function DisplayReview() {
+
+const history = useHistory();
 
 //  useSelector to access states within reducers
 const feelings = useSelector((store) => store.feelings);
@@ -30,7 +33,7 @@ const submitFeedback = () => {
     }).catch((err) => {
         console.log('error in POST feedback', err);
     });
-    // history.push('/');
+    history.push('/confirmation');
 }
 
 

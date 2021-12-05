@@ -10,6 +10,7 @@ import InputUnderstanding from '../Understanding/Understanding.jsx';
 import InputSupport from '../Support/Support.jsx';
 import InputComment from '../Comments/Comments.jsx';
 import DisplayReview from '../Review/Review.jsx';
+import DisplayConfirmationPage from '../Confirmation/Confirmation.jsx';
 
 function App() {
 
@@ -22,8 +23,7 @@ function App() {
         </header>
 
       
-      {/* create pseudo routes for now - 
-      feelings is initial route */}
+      {/* create routes for components */}
         <Route exact path="/">
           <InputFeelings />
         </Route>
@@ -39,11 +39,9 @@ function App() {
         <Route exact path="/review">
           <DisplayReview />
         </Route>
-
-        {/* <Route exact path="/confirmation">
-          <Confirmation />
-        </Route> */}
-
+        <Route exact path="/confirmation">
+          <DisplayConfirmationPage />
+        </Route>
       </Router>
 
     </div>

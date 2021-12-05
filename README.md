@@ -60,12 +60,12 @@ To Do:
 - [x] bundle reducers in object
 
 SETUP POST:
-- [ ] Add post route in server.js (express route)
-- [ ] Create FeedbackRouter file, add router.post to insert into database
+- [x] Add post route in server.js (express route)
+- [x] Create FeedbackRouter file, add router.post to insert into database
 
 On click of submit:
-- [ ] axios POST object to database
-- [ ] route to confirmation component
+- [x] axios POST object to database
+- [x] route to confirmation component
 
 ### confirmation component
 - [ ] setup return html (with button)
