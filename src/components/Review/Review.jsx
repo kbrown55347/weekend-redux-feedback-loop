@@ -9,6 +9,15 @@ const understanding = useSelector((store) => store.understanding);
 const support = useSelector((store) => store.support);
 const comments = useSelector((store) => store.comments);
 
+// bundles states into one object
+const feedback = {
+    feelings: {feelings},
+    understanding: {understanding},
+    support: {support},
+    comments: {comments}
+}
+// console.log({feedback});
+
 
     return (
         <div>

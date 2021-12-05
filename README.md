@@ -53,12 +53,18 @@ To Do:
 - [x] setup function for user to be wired to review component on click of Next button
 
 ### review component
-- [ ] setup return of html (<p> and submit button)
-- [ ] import reducers for each component
-- [ ] display each reducer value in p tag on page
+- [x] setup return of html (<p> and submit button)
+- [x] import reducers for each component
+- [x] display each reducer value in p tag on page
+
+- [x] bundle reducers in object
+
+SETUP POST:
+- [ ] Add post route in server.js (express route)
+- [ ] Create FeedbackRouter file, add router.post to insert into database
 
 On click of submit:
-- [ ] axios POST route info to database (bundle as one object)
+- [ ] axios POST object to database
 - [ ] route to confirmation component
 
 ### confirmation component
