@@ -13,28 +13,40 @@ import { Provider } from 'react-redux';
 const feelings = (state = '', action) => {
     if (action.type === 'ADD_FEELINGS') {
         return action.payload;
-    }
+    };
+    if (action.type === 'RESET_STATE') {
+        return action.payload;
+    };
     return state;
 };
 
 const understanding = (state = '', action) => {
     if (action.type === 'ADD_UNDERSTANDING') {
         return action.payload;
-    }
+    };
+    if (action.type === 'RESET_STATE') {
+        return action.payload;
+    };
     return state;
 };
 
 const support = (state = '', action) => {
     if (action.type === 'ADD_SUPPORT') {
         return action.payload;
-    }
+    };
+    if (action.type === 'RESET_STATE') {
+        return action.payload;
+    };
     return state;
 };
 
 const comments = (state = '', action) => {
     if (action.type === 'ADD_COMMENT') {
         return action.payload;
-    }
+    };
+    if (action.type === 'RESET_STATE') {
+        return action.payload;
+    };
     return state;
 };
 

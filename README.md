@@ -68,9 +68,9 @@ On click of submit:
 - [x] route to confirmation component
 
 ### confirmation component
-- [ ] setup return html (with button)
+- [x] setup return html (with button)
 - [ ] import each reducer
 
 On click of leave new feedback:
 - [ ] reset each reducer to empty
-- [ ] route to feelings component
+- [x] route to feelings component

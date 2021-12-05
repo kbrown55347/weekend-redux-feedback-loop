@@ -1,12 +1,17 @@
 import {useHistory} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 function DisplayConfirmationPage() {
 
     const history = useHistory();
+    const dispatch = useDispatch();
 
     const handleLeaveNewFeedbackClick = () => {
-        // dispatch to each state value to empty
-        
+        // dispatch to reducers to empty state values
+        dispatch({
+            type: 'RESET_STATE',
+            payload: ''
+        })
 
         // history.push to feelings page
         history.push('/');
