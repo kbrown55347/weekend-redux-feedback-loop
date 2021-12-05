@@ -1,15 +1,12 @@
 const express = require('express');
 const router = express.Router();
-
 const pg = require('pg');
-
-const pool = require('../modules/pool.js');
 const Pool = pg.Pool;
 
 // create our pool object using the above constructor:
 const pool = new Pool({
-    database: 'prime_feedback',
-    host: 'Localhost',
+    database: 'prime_feedback', // name of database
+    host: 'Localhost', // where database lives
 });
 
 // log to console when pool object makes connection
@@ -24,26 +21,25 @@ pool.on('error', (error) => {
 
 // POST Route
 router.post('/', (req, res) => {
-    console.log('in POST /submitReview')
+    // console.log('in POST /submitReview');
     // console.log('adding review object', req.body);
-//     let newTask = req.body;
-//     let queryText = `INSERT INTO "taskList" 
-//     ("name", "description", "completeByDate", "isComplete")
-//     VALUES ($1, $2, $3, $4);`;
-//     let queryValues = [
-//         newTask.name,
-//         newTask.description,
-//         newTask.date,
-//         newTask.isComplete
-//     ];
-//     pool.query(queryText, queryValues)
-//         .then(dbRes => {
-//             res.sendStatus(200);
-//         })
-//         .catch(dbErr => {
-//             res.sendStatus(500);
-//         });
-// });
+    let feedbackValues = req.body;
+    let queryText = `INSERT INTO "feedback"
+    ("feeling", "understanding", "support", "comments")
+    VALUES ($1, $2, $3, $4);`;
+    let queryValues = [
+        feedbackValues.feelings,
+        feedbackValues.understanding,
+        feedbackValues.support,
+        feedbackValues.comments
+    ];
+    pool.query(queryText, queryValues)
+        .then(dbRes => {
+            res.sendStatus(200);
+        })
+        .catch(dbErr => {
+            res.sendStatus(500);
+        });
 });
 
-module.exports = reviewRouter;
+module.exports = router;

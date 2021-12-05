@@ -16,19 +16,13 @@ function InputComment() {
 
     // create function to dispatch input to comments reducer
     const handleInputChange = () => {
-        console.log(valueToAdd);
-        // if there is no input
-        if (valueToAdd === '') {
-            // alert user to add input value
-            alert('Please add input to proceed.');
-        } else {
+        // console.log(valueToAdd);
         dispatch({
             type: 'ADD_COMMENT',
             payload: valueToAdd
         })
             // send to next page
         history.push('/review');
-        }
     }
 
 

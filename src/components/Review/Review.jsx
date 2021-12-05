@@ -11,16 +11,26 @@ const comments = useSelector((store) => store.comments);
 
 // bundles states into one object
 const feedback = {
-    feelings: {feelings},
-    understanding: {understanding},
-    support: {support},
-    comments: {comments}
+    feelings: `${feelings}`,
+    understanding: `${understanding}`,
+    support: `${support}`,
+    comments: `${comments}`
 }
-// console.log({feedback});
+console.log({feedback});
 
 // create function to submit feedback via axios post
 const submitFeedback = () => {
-    console.log('in Post route', feedback)
+    console.log('in axios POST', feedback);
+    axios({
+        method: 'POST',
+        url: '/submitReview',
+        data: feedback
+    }).then((res) => {
+        console.log('in POST feedback', res);
+    }).catch((err) => {
+        console.log('error in POST feedback', err);
+    });
+    // history.push('/');
 }
 
 
