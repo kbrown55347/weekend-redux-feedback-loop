@@ -9,6 +9,7 @@ import InputFeelings from '../Feelings/Feelings.jsx';
 import InputUnderstanding from '../Understanding/Understanding.jsx';
 import InputSupport from '../Support/Support.jsx';
 import InputComment from '../Comments/Comments.jsx';
+import DisplayReview from '../Review/Review.jsx';
 
 function App() {
 
@@ -35,10 +36,9 @@ function App() {
         <Route exact path="/comments">
           <InputComment />
         </Route>
-
-        {/* <Route exact path="/review">
-          <Review />
-        </Route> */}
+        <Route exact path="/review">
+          <DisplayReview />
+        </Route>
 
         {/* <Route exact path="/confirmation">
           <Confirmation />

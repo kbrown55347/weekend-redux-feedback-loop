@@ -38,19 +38,19 @@ To Do:
 - [x] setup function for user to be wired to support component on click of Next button
 
 ### support component
-- [ ] setup return of html (input - num, next button)
-- [ ] create support reducer in index.js, import to component
+- [x] setup return of html (input - num, next button)
+- [x] create support reducer in index.js, import to component
 
 - On click of next button:
-- [ ] alert user if input field is empty (if)
-- [ ] (else) use value of input to dispatch to support reducer
-- [ ] setup function for user to be wired to comments component on click of Next button
+- [x] alert user if input field is empty (if)
+- [x] (else) use value of input to dispatch to support reducer
+- [x] setup function for user to be wired to comments component on click of Next button
 
 ### comments component
-- [ ] setup return of html (input - string, next button)
-- [ ] create comments reducer in index.js, import to component
-- [ ] use value of input to dispatch to comments reducer
-- [ ] setup function for user to be wired to review component on click of Next button
+- [x] setup return of html (input - string, next button)
+- [x] create comments reducer in index.js, import to component
+- [x] use value of input to dispatch to comments reducer
+- [x] setup function for user to be wired to review component on click of Next button
 
 ### review component
 - [ ] setup return of html (<p> and submit button)
