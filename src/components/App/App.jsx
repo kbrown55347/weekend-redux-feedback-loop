@@ -22,8 +22,8 @@ function App() {
           <h4>Don't forget it!</h4>
         </header>
 
-      
-      {/* create routes for components */}
+
+        {/* create routes for components */}
         <Route exact path="/">
           <InputFeelings />
         </Route>

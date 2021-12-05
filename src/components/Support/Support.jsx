@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function InputSupport() {
 
@@ -22,12 +22,12 @@ function InputSupport() {
             // alert user to add input value
             alert('Please add input to proceed.');
         } else {
-        dispatch({
-            type: 'ADD_SUPPORT',
-            payload: valueToAdd
-        })
+            dispatch({
+                type: 'ADD_SUPPORT',
+                payload: valueToAdd
+            })
             // send to next page
-        history.push('/comments');
+            history.push('/comments');
         }
     }
 
@@ -37,11 +37,11 @@ function InputSupport() {
             <h1>How well are you being supported?</h1>
             <p>Support?</p>
             <input
-                    onChange={handleInputValue}
-                    type='number'
-                    placeholder='1-5'
-                    value={valueToAdd}
-                />
+                onChange={handleInputValue}
+                type='number'
+                placeholder='1-5'
+                value={valueToAdd}
+            />
             <button onClick={handleInputChange}>Next</button>
         </div>
     )

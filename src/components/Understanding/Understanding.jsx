@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function InputUnderstanding() {
 
@@ -22,12 +22,12 @@ function InputUnderstanding() {
             // alert user to add input value
             alert('Please add input to proceed.');
         } else {
-        dispatch({
-            type: 'ADD_UNDERSTANDING',
-            payload: valueToAdd
-        })
+            dispatch({
+                type: 'ADD_UNDERSTANDING',
+                payload: valueToAdd
+            })
             // send to next page
-        history.push('/support');
+            history.push('/support');
         }
     }
 
@@ -37,11 +37,11 @@ function InputUnderstanding() {
             <h1>How well are you understanding the content?</h1>
             <p>Understanding?</p>
             <input
-                    onChange={handleInputValue}
-                    type='number'
-                    placeholder='1-5'
-                    value={valueToAdd}
-                />
+                onChange={handleInputValue}
+                type='number'
+                placeholder='1-5'
+                value={valueToAdd}
+            />
             <button onClick={handleInputChange}>Next</button>
         </div>
     )

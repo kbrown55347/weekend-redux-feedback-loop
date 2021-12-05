@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function InputComment() {
 
@@ -21,7 +21,7 @@ function InputComment() {
             type: 'ADD_COMMENT',
             payload: valueToAdd
         })
-            // send to next page
+        // send to next page
         history.push('/review');
     }
 
@@ -31,11 +31,11 @@ function InputComment() {
             <h1>Any comments you want to leave?</h1>
             <p>Comments</p>
             <input
-                    onChange={handleInputValue}
-                    type='text'
-                    placeholder='add comment'
-                    value={valueToAdd}
-                />
+                onChange={handleInputValue}
+                type='text'
+                placeholder='add comment'
+                value={valueToAdd}
+            />
             <button onClick={handleInputChange}>Next</button>
         </div>
     )

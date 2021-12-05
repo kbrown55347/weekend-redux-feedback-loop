@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import React, { useState } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 function InputFeelings() {
 
@@ -22,12 +22,12 @@ function InputFeelings() {
             // alert user to add input value
             alert('Please add input to proceed.');
         } else {
-        dispatch({
-            type: 'ADD_FEELINGS',
-            payload: valueToAdd
-        })
-        // send to next page
-        history.push('/understanding')
+            dispatch({
+                type: 'ADD_FEELINGS',
+                payload: valueToAdd
+            })
+            // send to next page
+            history.push('/understanding')
         }
     }
 
@@ -36,11 +36,11 @@ function InputFeelings() {
             <h1>How are you feeling today?</h1>
             <p>Feeling?</p>
             <input
-                    onChange={handleInputValue}
-                    type='number'
-                    placeholder='1-5'
-                    value={valueToAdd}
-                />
+                onChange={handleInputValue}
+                type='number'
+                placeholder='1-5'
+                value={valueToAdd}
+            />
             <button onClick={handleInputChange}>Next</button>
         </div>
     )

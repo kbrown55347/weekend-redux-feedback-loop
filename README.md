@@ -1,76 +1,58 @@
-# Project Name
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# Redux - Feedback Loop
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+*Duration: 2 day sprint*
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+I created a form that collects user feedback. The user is first prompted to provide feedback on how they are feeling, then on their understanding of the content, next on how well they feel supported and lastly they are able to leave a comment if they wish. All user feedback is displayed at the end for them to review before submitting. Once they submit it, they are moved to the next page where they can click to leave new feedback.
 
+On the pages where the user enters their feedback, I captured these values and used reducers to store them. Then by importing the redux store, I accessed the values within the reducers to display the user's feedback on the review page. Lastly I used an axios POST route to store the user's feedback in the SQL database.
 
+## Prerequisites
 
-To Do:
+- [Node.js](https://nodejs.org/en/)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-### Setup
+## Installation
 
-- [x] npm installs, create database
-- [x] setup index.js for reducers, store, and provider
-- [x] create components for feelings, understanding, support, comments, review, confirmation
-- [x] create routes for each component
+1. To be able to store the user feedback, create a database named `prime_feedback`.
 
-### feelings component
-- [x] setup return of html (input - num, next button)
-- [x] create feelings reducer in index.js, import to component
+2. The query in the `data.sql` file is setup to create the necessary table to allow the application to run correctly. The project is built on [PostgreSQL](https://www.postgresql.org/download/), so you will need to have that installed. I recommend using [Postico](https://eggerapps.at/postico/) to run the query, as that was used to create it.
 
-- On click of next button:
-- [x] alert user if input field is empty (if)
-- [x] (else) use value of input to dispatch to feelings reducer
-- [x] setup function for user to be wired to understanding component on click of Next button
+3. Open your editor of choice and run an `npm install` in your terminal to install the project's node dependencies.
 
-### understanding component
-- [x] setup return of html (input - num, next button)
-- [x] create understanding reducer in index.js, import to component
+4. Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`. 
 
-- On click of next button:
-- [x] alert user if input field is empty (if)
-- [x] (else) use value of input to dispatch to understanding reducer
-- [x] setup function for user to be wired to support component on click of Next button
+5. Run `npm run server` in your terminal to start the server.
 
-### support component
-- [x] setup return of html (input - num, next button)
-- [x] create support reducer in index.js, import to component
+6. Open a new terminal tab and run `npm run client` to start the react client app.
 
-- On click of next button:
-- [x] alert user if input field is empty (if)
-- [x] (else) use value of input to dispatch to support reducer
-- [x] setup function for user to be wired to comments component on click of Next button
+## Usage
 
-### comments component
-- [x] setup return of html (input - string, next button)
-- [x] create comments reducer in index.js, import to component
-- [x] use value of input to dispatch to comments reducer
-- [x] setup function for user to be wired to review component on click of Next button
+1. On the first page, input a number 1-5 based on how you are feeling. Click next to move to the next page.
 
-### review component
-- [x] setup return of html (<p> and submit button)
-- [x] import reducers for each component
-- [x] display each reducer value in p tag on page
+2. Enter a number 1-5 reflecting your understanding of the content. Click next to continue.
 
-- [x] bundle reducers in object
+3. Enter a number 1-5 based on how well you feel you are supported. Click next to continue.
 
-SETUP POST:
-- [x] Add post route in server.js (express route)
-- [x] Create FeedbackRouter file, add router.post to insert into database
+4. On the next page, leave an optional comment. Click next to proceed.
 
-On click of submit:
-- [x] axios POST object to database
-- [x] route to confirmation component
+5. Review your feedback then click submit.
 
-### confirmation component
-- [x] setup return html (with button)
-- [ ] import each reducer
+6. Click the button to go back to the first page to enter in new information.
 
-On click of leave new feedback:
-- [ ] reset each reducer to empty
-- [x] route to feelings component
+## Built With
+
+- HTML
+- JavaScript
+- React
+- Redux
+- Node.js
+
+## Acknowledgment
+
+Thank you to Prime Digital Academy, my instructor Matthew Black, and my classmates who equipped and helped me to create this application.
+
+## Support
+
+If you have suggestions or issues, please email me at kbrown55347@gmail.com.
