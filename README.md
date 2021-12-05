@@ -8,6 +8,8 @@ I created a form that collects user feedback. The user is first prompted to prov
 
 On the pages where the user enters their feedback, I captured these values and used reducers to store them. Then by importing the redux store, I accessed the values within the reducers to display the user's feedback on the review page. Lastly I used an axios POST route to store the user's feedback in the SQL database.
 
+![Working Image](/public/FeedbackLoopDemo.gif)
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/en/)

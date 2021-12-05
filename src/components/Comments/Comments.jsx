@@ -39,7 +39,6 @@ function InputComment() {
             <button onClick={handleInputChange}>Next</button>
         </div>
     )
-
 } // end InputComment
 
 
