@@ -18,9 +18,9 @@ function InputSupport() {
     const handleInputChange = () => {
         console.log(valueToAdd);
         // if there is no input
-        if (valueToAdd === '') {
+        if (valueToAdd < 1 || valueToAdd > 5 || valueToAdd === '') {
             // alert user to add input value
-            alert('Please add input to proceed.');
+            alert('Please input value between 1-5 to proceed.');
         } else {
             dispatch({
                 type: 'ADD_SUPPORT',
