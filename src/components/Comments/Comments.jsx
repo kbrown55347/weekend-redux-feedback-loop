@@ -36,6 +36,7 @@ function InputComment() {
                 placeholder='add comment'
                 value={valueToAdd}
             />
+            <br></br>
             <button onClick={handleInputChange}>Next</button>
         </div>
     )
