@@ -30,7 +30,7 @@ function InputComment() {
         <div>
             <h1>Any comments you want to leave?</h1>
             <p>Comments</p>
-            <input
+            <textarea
                 onChange={handleInputValue}
                 type='text'
                 placeholder='add comment'
